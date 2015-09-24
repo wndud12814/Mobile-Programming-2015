@@ -1,20 +1,20 @@
 package kr.ac.embedded.kookmin.puzzle2;
 
-interface Nose {
-	public int iMethod();
+interface Nose {//이미 상속받은 class에 또 상속을 하고 싶을때 사용.
+	public int iMethod();//method 구현을 하면 안된다.
 }
 
 abstract class Picasso implements Nose {
-	/** **/
+	public int iMethod(){
 		return 7;
 	}
 }
 
-class Clowns extends /** **/ {
+class Clowns extends Picasso {
 }
 
 class Acts extends Picasso {
-	/** **/
+	public int iMethod(){
 		return 5;
 	}
 }
